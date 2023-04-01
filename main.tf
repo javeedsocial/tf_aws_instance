@@ -1,11 +1,11 @@
 provider "aws" {
-access_key = "<Your_Access_Key>"
-secret_key = "<Your_Secret_Key>"
-token = "<Your_Security_Token>"
+access_key = "var.keys.access_key"
+secret_key = "var.keys.secret_key"
+token = "var.keys.token"
 region = "us-east-1"
 }
 
 resource "aws_instance" "terraform_demo" {
-ami = "ami-09e67e426f25ce0d7"
+ami = "var.ic.ami"
 instance_type = "t2.micro"
 }
