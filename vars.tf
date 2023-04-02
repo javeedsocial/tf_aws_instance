@@ -1,4 +1,4 @@
-variable "keys" {
+variable "cloud" {
     type = map(string)
     description = "AWS Keys required to login"
     default = {
@@ -9,7 +9,7 @@ variable "keys" {
     }
 }
 
-variable "ic" {
+variable "vm" {
     type = map(string)
     description = "EC2 instance details"
     default = {
